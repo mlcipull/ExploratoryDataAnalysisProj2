@@ -18,7 +18,7 @@ colnames(sum.each.year.MD)=c("year","type","Emissions")
 
 png(filename = "plot3.png")
 plot<-ggplot(sum.each.year.MD,aes(year,Emissions,color=type))
-plot.vars <- plot + geom_line() + xlab("Year") + ylab(expression('Total PM 2.5 Emissions')) +
+plot.vars <- plot + geom_line() + xlab("Year") + ylab("Total PM 2.5 Emissions") +
   ggtitle('Total Emissions in Baltimore City, Maryland: 1999 to 2008')
 print(plot.vars)
 dev.off()
