@@ -12,7 +12,7 @@ SCC <- readRDS("Source_Classification_Code.rds")
 # changed from 1999–2008?
 
 Emissions.SCC<-merge(NEI,SCC,by="SCC")
-Coal.Emissions <- grep("coal",Emissions.SCC$Short.Name) #Gives the rows where coal is
+Coal.Emissions <- grep("coal",Emissions.SCC$Short.Name,ignore.case = TRUE) #Gives the rows where coal is
 
 Coal.Only<-Emissions.SCC[Coal.Emissions,]
 sum.each.year<-aggregate(Coal.Only$Emissions,by=list(Coal.Only$year),FUN = sum)
