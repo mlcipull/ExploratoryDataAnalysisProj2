@@ -26,7 +26,7 @@ Cali.Fips<-rep("06037",length(sum.cali.motor.emissions$year))
 CA.motor.emissions<-cbind(sum.cali.motor.emissions,Cali.Fips)
 colnames(CA.motor.emissions)=c("year","Emissions","fips")
 
-png("plot5.png")
+png("plot6.png")
 both.motor.emission<-rbind(MD.motor.emissions,CA.motor.emissions)
 qplot(year,Emissions,data = both.motor.emission,color=fips,geom="line")+ggtitle("Motor Vehicle Emissions in Baltimore (24510) and in Los Angeles (06037)")
 dev.off()
